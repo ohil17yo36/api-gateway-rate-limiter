@@ -1,38 +1,12 @@
 package metric;
 
-public class PerformanceMetric {
+import org.immutables.value.Value;
 
-    private int totalRequests;
-    private double duration;
-    private double hitRate;
+@Value.Immutable
+@Value.Style(visibility = Value.Style.ImplementationVisibility.PUBLIC)
+public abstract class PerformanceMetric {
 
-    public PerformanceMetric(int totalRequests, double duration, double hitRate) {
-        this.totalRequests = totalRequests;
-        this.duration = duration;
-        this.hitRate = hitRate;
-    }
-
-    public int getTotalRequests() {
-        return totalRequests;
-    }
-
-    public void setTotalRequests(int totalRequests) {
-        this.totalRequests = totalRequests;
-    }
-
-    public double getDuration() {
-        return duration;
-    }
-
-    public void setDuration(double duration) {
-        this.duration = duration;
-    }
-
-    public double getHitRate() {
-        return hitRate;
-    }
-
-    public void setHitRate(double hitRate) {
-        this.hitRate = hitRate;
-    }
+    public abstract int totalRequests();
+    public abstract double duration();
+    public abstract double hitRate();
 }
