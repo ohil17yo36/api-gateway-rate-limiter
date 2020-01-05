@@ -6,7 +6,7 @@ import java.util.concurrent.CountDownLatch;
 
 public class RateLimitTester {
 
-    public PerformanceMetric test(RateLimiter rl, int totalRequests, int requestRate) {
+    public PerformanceMetric test(AbstractRateLimiter rl, int totalRequests, int requestRate) {
 
         long startTime = System.currentTimeMillis();
         CountDownLatch cdl = new CountDownLatch(totalRequests);

@@ -1,12 +1,12 @@
 package rate.limiter;
 
-public class LeakyBucketRateLimiter extends RateLimiter {
+public class LeakyBucketAbstractRateLimiter extends AbstractRateLimiter {
 
     private long nextAllowedTime;
 
     private final long TIME_INTERVAL_BETWEEN_REQUESTS;
 
-    public LeakyBucketRateLimiter(int maxRequestPerSecond) {
+    public LeakyBucketAbstractRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         TIME_INTERVAL_BETWEEN_REQUESTS = 1000/maxRequestPerSecond;
         nextAllowedTime = System.currentTimeMillis();
