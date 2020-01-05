@@ -37,8 +37,6 @@ public class RateLimitTester {
 
 
         double duration = (System.currentTimeMillis() - startTime) / 1000.0;
-        System.out.println(totalRequests + " requests processed in " + duration + " seconds. "
-                + "Rate: " + (double) totalRequests / duration + " per second");
         return new PerformanceMetric(totalRequests, duration, (double) totalRequests / duration);
     }
 }

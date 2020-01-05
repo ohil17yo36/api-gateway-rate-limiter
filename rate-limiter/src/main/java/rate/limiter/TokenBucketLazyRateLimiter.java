@@ -1,12 +1,12 @@
 package rate.limiter;
 
-public class TokenBucketLazyAbstractRateLimiter extends AbstractRateLimiter {
+public class TokenBucketLazyRateLimiter extends AbstractRateLimiter {
 
     private int tokenCount;
 
     private long lastRefillTime;
 
-    public TokenBucketLazyAbstractRateLimiter(int maxRequestPerSecond) {
+    public TokenBucketLazyRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         this.tokenCount = maxRequestPerSecond;
         this.lastRefillTime = System.currentTimeMillis();
