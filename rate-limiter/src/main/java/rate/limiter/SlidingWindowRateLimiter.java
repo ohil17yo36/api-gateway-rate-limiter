@@ -4,11 +4,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class SlidingWindowAbstractRateLimiter extends AbstractRateLimiter {
+public class SlidingWindowRateLimiter extends AbstractRateLimiter {
 
     private final ConcurrentMap<Long, AtomicInteger> windowMap;
 
-    public SlidingWindowAbstractRateLimiter(int maxRequestPerSecond) {
+    public SlidingWindowRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         this.windowMap = new ConcurrentHashMap();
     }
