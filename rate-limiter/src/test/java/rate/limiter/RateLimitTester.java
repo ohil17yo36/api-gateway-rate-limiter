@@ -1,5 +1,6 @@
 package rate.limiter;
 
+import metric.ImmutablePerformanceMetric;
 import metric.PerformanceMetric;
 
 import java.util.concurrent.CountDownLatch;
@@ -37,6 +38,10 @@ public class RateLimitTester {
 
 
         double duration = (System.currentTimeMillis() - startTime) / 1000.0;
-        return new PerformanceMetric(totalRequests, duration, (double) totalRequests / duration);
+        return ImmutablePerformanceMetric.builder()
+                .totalRequests(totalRequests)
+                .duration(duration)
+                .hitRate((double) totalRequests / duration)
+                .build();
     }
 }
