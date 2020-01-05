@@ -1,0 +1,12 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <modules>
+        <module>rate-limiter</module>
+    </modules>
+
+    <groupId>com.ohil17yo36.api</groupId>
+    <artifactId>gateway</artifactId>
+
+</project>
