@@ -2,11 +2,11 @@ package rate.limiter;
 
 import java.util.concurrent.TimeUnit;
 
-public class TokenBucketRateLimiter extends RateLimiter {
+public class TokenBucketAbstractRateLimiter extends AbstractRateLimiter {
 
     private int numberOfTokens;
 
-    public TokenBucketRateLimiter(int maxRequestPerSecond) {
+    public TokenBucketAbstractRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         numberOfTokens = maxRequestPerSecond;
         new Thread(() -> {

@@ -3,11 +3,11 @@ package rate.limiter;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SlidingLogRateLimiter extends RateLimiter {
+public class SlidingLogAbstractRateLimiter extends AbstractRateLimiter {
 
     private final Queue<Long> q;
 
-    public SlidingLogRateLimiter(int maxRequestPerSecond) {
+    public SlidingLogAbstractRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         q = new LinkedList();
     }

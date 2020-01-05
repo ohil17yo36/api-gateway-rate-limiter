@@ -4,11 +4,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class FixedWindowCounterRateLimiter extends RateLimiter {
+public class FixedWindowCounterAbstractRateLimiter extends AbstractRateLimiter {
 
     private final ConcurrentMap<Long, AtomicInteger> windowMap;
 
-    public FixedWindowCounterRateLimiter(int maxRequestPerSecond) {
+    public FixedWindowCounterAbstractRateLimiter(int maxRequestPerSecond) {
         super(maxRequestPerSecond);
         this.windowMap = new ConcurrentHashMap();
     }

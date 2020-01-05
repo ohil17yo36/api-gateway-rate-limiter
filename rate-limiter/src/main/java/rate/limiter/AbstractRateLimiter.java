@@ -1,10 +1,10 @@
 package rate.limiter;
 
-public abstract class RateLimiter {
+public abstract class AbstractRateLimiter {
 
     protected int maxRequestPerSecond;
 
-    public RateLimiter(int maxRequestPerSecond) {
+    public AbstractRateLimiter(int maxRequestPerSecond) {
         this.maxRequestPerSecond = maxRequestPerSecond;
     }
 
