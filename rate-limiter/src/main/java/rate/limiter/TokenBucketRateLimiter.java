@@ -21,6 +21,7 @@ public class TokenBucketRateLimiter extends AbstractRateLimiter {
         }).start();
     }
 
+    @Override
     public boolean allow() {
         synchronized(this) {
             if(numberOfTokens>0) {

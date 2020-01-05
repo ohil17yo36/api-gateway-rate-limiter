@@ -12,6 +12,7 @@ public class LeakyBucketRateLimiter extends AbstractRateLimiter {
         nextAllowedTime = System.currentTimeMillis();
     }
 
+    @Override
     public boolean allow() {
         long currentTime = System.currentTimeMillis();
         synchronized(this) {

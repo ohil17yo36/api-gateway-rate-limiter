@@ -1,6 +1,7 @@
-package rate.limiter;
+package rate.limiter.util;
 
 import metric.PerformanceMetric;
+import rate.limiter.AbstractRateLimiter;
 
 import java.util.concurrent.CountDownLatch;
 

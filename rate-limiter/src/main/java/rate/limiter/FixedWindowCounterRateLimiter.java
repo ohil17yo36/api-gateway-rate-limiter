@@ -13,6 +13,7 @@ public class FixedWindowCounterRateLimiter extends AbstractRateLimiter {
         this.windowMap = new ConcurrentHashMap();
     }
 
+    @Override
     public boolean allow() {
         long currentTimeInMillis = System.currentTimeMillis();
         long windowIndex = currentTimeInMillis/(1000*1000);

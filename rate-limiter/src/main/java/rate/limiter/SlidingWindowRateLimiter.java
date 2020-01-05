@@ -13,6 +13,7 @@ public class SlidingWindowRateLimiter extends AbstractRateLimiter {
         this.windowMap = new ConcurrentHashMap();
     }
 
+    @Override
     public boolean allow() {
         long currentTime = System.currentTimeMillis();
         long currentWindowKey = currentTime / (1000*1000);

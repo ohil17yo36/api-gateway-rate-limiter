@@ -12,6 +12,7 @@ public class SlidingLogRateLimiter extends AbstractRateLimiter {
         q = new LinkedList();
     }
 
+    @Override
     public boolean allow() {
         long currentTime = System.currentTimeMillis();
         long boundary = currentTime - 1000;

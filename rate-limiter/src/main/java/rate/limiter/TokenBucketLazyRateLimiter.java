@@ -12,6 +12,7 @@ public class TokenBucketLazyRateLimiter extends AbstractRateLimiter {
         this.lastRefillTime = System.currentTimeMillis();
     }
 
+    @Override
     public boolean allow() {
         synchronized(this) {
             refill();
